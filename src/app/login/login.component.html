@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-subtitle>
+    Login to enter.
+  </mat-card-subtitle>
+  <mat-card-content>
+
+    <form #loginForm="ngForm">
+      <mat-form-field appearance="standard">
+        <mat-label>User name</mat-label>
+        <input matInput [(ngModel)]="user" name="user">
+        <mat-icon matSuffix>mood</mat-icon>
+        <!--mat-hint>User name or email address</mat-hint-->
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="standard">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="password" name="password">
+        <mat-icon matSuffix>lock_open</mat-icon>
+        <!--mat-hint>User name or email address</mat-hint-->
+      </mat-form-field>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="login()">Login</button>
+      </mat-card-actions>
+
+    </form>
+  </mat-card-content>
+
+</mat-card>

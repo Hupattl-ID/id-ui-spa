@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon matSuffix>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-menu-item *ngIf="isAuthenticated()" routerLink="/user">
+      <mat-icon>people</mat-icon>
+      <span>Users</span>
+    </button>
+  </mat-menu>
+
+  <h1>
+    <mat-icon>how_to_reg</mat-icon>
+    <span>Huepattl! ID</span>
+  </h1>
+  <span class="spacer"></span>
+  <mat-icon>person</mat-icon>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
